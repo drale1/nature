@@ -1,0 +1,692 @@
+@charset "UTF-8";
+/* Scss Document */
+/*
+@import "base/base";
+@import "base/animations";
+@import "base/typography";
+@import "base/utilities";
+
+@import "pages/homes";
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "abstracts/functions";
+*/
+.beze {
+  color: #fb00b4;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.navigacija {
+  float: left;
+}
+.navigacija li {
+  display: inline-block;
+  margin-left: 30px;
+}
+.navigacija:first-child {
+  margin: 0;
+}
+.navigacija a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
+}
+
+.dugmad {
+  float: right;
+}
+
+.dugmic-glavni:link,
+.dugmic-sporedni:link {
+  padding: 10px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 100px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 150px;
+  color: aliceblue;
+}
+
+.dugmic-glavni:link,
+.dugmic-sporedni:link {
+  background: #fb00b4;
+}
+.dugmic-glavni:hover,
+.dugmic-sporedni:hover {
+  background-color: #95006b;
+  transition: 0.6s;
+}
+
+.krug {
+  box-shadow: 0 1rem 2rem;
+  display: inline-block;
+}
+
+.krug {
+  padding: 10px;
+  background-color: red;
+  border-radius: 100px;
+  color: #333;
+  display: inline-block;
+}
+
+.elipsa {
+  padding: 10px;
+  background-color: red;
+  border-radius: 100px;
+  color: #fb00b4;
+  display: inline-block;
+}
+
+.elips {
+  margin: 30px;
+}
+
+.kvadrat, .prav {
+  padding: 6px;
+  text-transform: uppercase;
+}
+
+.kvadrat {
+  color: blue;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0 px;
+  margin: 0 px;
+  /* ovo ispod inherit iskreno ne kontam */
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  /* kada se postavi font-size: 10px; to zna─ìi da je 10px = 1rem. Ali mi ne─çemo postaviti u px nego u procentima. Dakle ako je default font size 16px, 10px bi u procentima bio 62.5% od 100% koji je 16px.
+  Ideja ovoga je fantasti─ìna. Kasnije ─çemo za svaki responzivni view definisan @ smanjivati font-size: na 50%, 40% ili manje
+  */
+  font-size: 62.5%;
+}
+
+body {
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.7;
+  padding: 3rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header {
+  /* ovo 95vh je da od vrh na dole prekrije 95% a da dole ostavi 5% */
+  height: 95vh;
+  /* ovo je ferlauf i pravo je dobar */
+  background-image: -webkit-linear-gradient(132deg, rgba(85, 197, 122, 0.4) 0%, rgba(40, 180, 133, 0.4) 24.87%, rgba(126, 213, 111, 0.4) 61.14%, rgba(85, 197, 122, 0.4) 100%), url("../img/hero.jpg");
+  background-image: -moz-linear-gradient(132deg, rgba(85, 197, 122, 0.4) 0%, rgba(40, 180, 133, 0.4) 24.87%, rgba(126, 213, 111, 0.4) 61.14%, rgba(85, 197, 122, 0.4) 100%), url("../img/hero.jpg");
+  background-image: -o-linear-gradient(132deg, rgba(85, 197, 122, 0.4) 0%, rgba(40, 180, 133, 0.4) 24.87%, rgba(126, 213, 111, 0.4) 61.14%, rgba(126, 213, 111, 0.4) 100%), url("../img/hero.jpg");
+  background-image: linear-gradient(318deg, rgba(85, 197, 122, 0.4) 0%, rgba(40, 180, 133, 0.4) 24.87%, rgba(126, 213, 111, 0.4) 61.14%, rgba(85, 197, 122, 0.4) 100%), url("../img/hero.jpg");
+  background-size: cover;
+  /* ovo dole je da sredina vrha slike uvijek bude na sredini i kropa ostatak slike dakle responzivno. mo┼╛e biti i bottom i center */
+  background-position: top;
+  /* ovo je super stvar kratimo ili pove─ìavamo ta─ìke pravougaonika od gornje lijeve pa u smjeru kazaljke za satu redamo koordinate i tako smo sasjekli donji desni dio*/
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  /* absolute pozicija ozna─ìava da je apsolutno u odnosu na parent element. U ovo slu─ìaju .header */
+}
+.header__logo {
+  width: 8rem;
+}
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header-primary {
+  color: #FFFFFF;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
+  text-transform: uppercase;
+  -webkit-box-shadow: 0px 0px;
+  box-shadow: 0px 0px;
+  text-shadow: 1px 1px 2px #000000;
+  /*Ovo je da bi se rje┼íio neki problem koji na kraju animacije malo kao da protrese objekat */
+  backface-visibility: hidden;
+  padding-top: 15rem;
+}
+
+.header-primary--main {
+  /* evo slike koja pokazuje razliku izme─æu block, inline-block http://4.bp.blogspot.com/-TiwOixlooJk/U4UyEnv_XpI/AAAAAAAACFs/NuuLz2IvoZ4/s1600/css-display-block-vs-inline-block.png */
+  display: block;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+  -webkit-box-shadow: 0 0;
+  box-shadow: 0 0;
+  text-shadow: 1px 1px 2px #000000;
+  animation-name: odOzgo;
+  animation-duration: 2s;
+  /* ovo je ponavljanje animacije
+  animation-iteration-count: 3; */
+  /* ovo su na─ìini da se animacija u jednom dijelu usporava a u drugom ubrzava 
+  animation-timing-function: ease-in-out; */
+}
+
+.header-primary--sub {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.75rem;
+  animation-name: odOzdo;
+  animation-duration: 2s;
+  padding-bottom: 2rem;
+}
+
+/* ovo je super stvar kao u js document.write */
+.header-primary--sub::after {
+  content: " vanjstine";
+}
+
+.header__text-box {
+  position: absolute;
+  /* ovim se postavlja na sredinu parenta objekat. Ali fokus nije od sredine objekta nego od njegove lijevo gornje ta─ìke */
+  top: 40%;
+  left: 50%;
+  /* ovim se fokus postavlja na sredina objekta */
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* ovo je animacija koja se radi isklju─ìivo u CSS-u. Animacije se rade sa transform */
+/* Ovi procenti na po─ìetku su vremenske pozicije u odnosu na definisano vrijeme */
+/* translateY je vertikalna linija pomjeranja */
+@keyframes odOzgo {
+  0% {
+    opacity: 0;
+    transform: translateY(-15rem);
+  }
+  80% {
+    opacity: 0.4;
+    transform: translateY(1.2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes odOzdo {
+  0% {
+    opacity: 0;
+    transform: translateY(15rem);
+  }
+  80% {
+    opacity: 0.4;
+    transform: translateY(-1.2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.btn {
+  font-size: 1.5em;
+  font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+  font: bold;
+}
+
+/*ovo je kako ─çe izgledati odre─æeni class kada je link */
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 4rem;
+  display: inline-block;
+  border-radius: 10rem;
+  /* ovo ispod mora i─çi da bi se odobrile tranzicije */
+  transition: all .2s;
+  /* poziciju postavljamo relativno zato ┼íto ho─çemo da .btn::after nju koristi kao referencu za absolut poziciju, jer ho─çemo da .btn::after postavimo iza originalnog objekta */
+  position: relative;
+  font-size: 2rem;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+
+/* :active je trnutak kada je kliknut ali ne i pu┼íten klik */
+.btn:active {
+  /*smanjio sam spu┼ítanje dugmeta sa -3px na -1px da bi izgledalo kao da je pritisnuto. Isto sam uradio i sa sjenkom */
+  transform: translateY(-1px);
+  -webkit-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.btn--white {
+  background-color: #FFFFFF;
+  color: #777777;
+  animation-name: odOzdo;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+/* sada ─çemo postaviti after pseudo element. To je prividan element. Fol je napraviti isti prividan element ali postavljen iza originalnog. Pseudo objekat je child originalnog. Ovo .btn::after zna─ìi ->unesi ovaj HTML objekat nakon HTML objekta ozna─ìenog classom .btn */
+.btn::after {
+  /*uvijek moramo	postaviti content: ""; ina─ìe ni┼íta od prividnog objekta */
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 10rem;
+  /*ove stavke ispod defini┼íu da ovaj pseudo element bude ta─ìno na poziciji originalnog */
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* z-index: -1 ozna─ìava -> postavi iza objekta */
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn:hover::after {
+  /* scale(2) ozna─ìava uduplavanje veli─ìine. Ali mi ─çemo koristiti scaleX i scaleY */
+  transform: scaleX(1.4) scaleY(1.6);
+  /* ovo je fol za fade out */
+  opacity: 0;
+}
+
+.btn--white::after {
+  background-color: white;
+}
+
+/* on u 010 lekciji koristi animation-fill-mode to mi nije jasno */
+/* on u 012 lekciji obja┼ínjava 3 stuba dobrog sitea: -reponzivan dizajn, - kod koji je dobro organizovan i obja┼ínjen -dobra peformansa tj. brzina
+
+/*
+Ovo se naziva Selektor
+.class
+a ovo se naziva Declaration block
+{
+color: blue;
+ovo se naziva Declaration
+padding: 34 px;
+ovo top: se naziva Property a ovo 2; se naziva Declared value
+top: 2;
+}
+*/
+/*
+Cascade je proces kombinovanja razli─ìitih stylesheetova i rje┼íavanje konflikata izme─æu razli─ìitih CSS pravila i deklaracija kada se vi┼íe od jednog pravila primjeni na odre─æeni element */
+/* overide jedne deklaracije u odnosu na drugu se radi sa !important */
+/* ovo je redoslijed prioritetnih deklaracija u CSS-u
+1. !important - koristi se samo u krajnjoj nu┼╛di. Daleko je bolje analizirati problem
+
+2. inline styles - to su deklaracije definisane u HTML-u a ne u odvojenom CSS fileu dakle ovako
+<p style="color:blue;font-size:46px;"> . Ali ni ovo se ne preporu─ìuje
+
+3. ID ili id unesen u html
+
+4. sve ostalo
+
+Zadnji je univerzalni selektor * - svi imaju prioritet u odnosu na njega
+
+Kada ima vi┼íe selectora tada se pove─çava prioritet
+ */
+/* vrlo bitna stvar ┼íto se ti─çe prioriteta je kada koristimo vi┼íe CSS filova kao ┼íto je na┼í CSS koji pravimo i npr. bootstrap. Na┼í CSS mora biti definisan zadnji u headeru HTML-a jer ─çe tako vr┼íiti overide svih ostalih CSS-ova */
+/* sve jedinice koje koristimo na kraju budu konvertovane u pixele */
+/* jedinice koje nismo definisali a prikazuju se po defaulteu
+-font je 16 px
+-width je 1000 px
+-1em font jedinica i widht je 24px (ove su responzivnije)
+-1rem je 16 px  ali ako se u po─ìetku defini┼íe font-size: 10px; onda je 1rem = 10px (rem je responzivan i najbolji na─ìin da se koristi. Bolji i od em)
+-vh i vw su procentualna razdaljina u odnosu na trenutni view (pretpostavljam da je ovo responzivno jer ga koristi Alen)
+
+
+
+/* 
+box - znamo da se sastoji od contenta (slika, tekst)  od paddinga i od margine. Ali bitno je znati da se background color i border postavljaju oko paddinga. Sa druge strane margina odvaja dv boxa
+*/
+/*
+nisam siguran ali mislim da sa
+box-sizing: border-box
+se content i padding defini┼íu kao jedna 
+dimenzija
+*/
+/* 
+on savjetuje da se radi po BEM sistemu davanja
+imena classovima. Block Element Modifier
+Dakle svaki 
+Parent DOM je .block {}
+Child DOM je .block__element {}
+Child Child DOM je .block__element--modifier {}
+*/
+/* 
+
+POSTOJE TRI SISTEMA PRAVLJENJA RESPONZIVNOG SITEA
+1 - FLOAT LAYOUTS
+2 - FLEXBOX
+3 - CSS GRID
+
+ON KA┼╜E DA ─åE KORISTITI FLOAT LAYOUTS ZA OVAJ PROJEKAT A MENI LI─åI NA GRID
+*/
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+.row:not(:last-child) {
+  margin-bottom: 6rem;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.col-1-od-1 {
+  width: 100%;
+  float: left;
+}
+.col-1-od-2 {
+  width: calc((100% - 6rem) / 2);
+  float: left;
+}
+.col-1-od-2:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.col-1-od-3 {
+  width: calc((100% - 6rem - 6rem) / 3);
+  float: left;
+}
+.col-1-od-3:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.col-2-od-3 {
+  width: calc(( 2 * (100% - 2 * 6rem) / 3) + 6rem);
+  float: left;
+}
+.col-2-od-3:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.col-1-od-4 {
+  width: calc((100% - 6rem - 6rem - 6rem) / 4);
+  float: left;
+}
+.col-1-od-4:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.col-2-od-4 {
+  width: calc((2 * (100% - 3 * 6rem )  / 4) + 6rem);
+  float: left;
+}
+.col-2-od-4:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.col-3-od-4 {
+  width: calc((3 * (100% - 3 * 6rem )  / 4) + 6rem * 2);
+  float: left;
+}
+.col-3-od-4:not(:last-child) {
+  margin-right: 6rem;
+}
+
+.kontrola {
+  background-color: lightgray;
+}
+
+/*
+div [class^="col-"] {
+    
+    background-color: crimson;
+}
+*/
+.section-o-nama {
+    background-color: lightgray;
+    padding-top: 25rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 25rem;
+    margin-top: -24vh;
+}
+
+.sekundarno-zaglavlje {
+    margin-left: 10%;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    -webkit-text-stroke-width: .05rem;
+    -webkit-text-stroke-color: blue;
+    display: inline-block;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+    background-image: -webkit-linear-gradient(175deg, #00b2fd 0%, #00ff0d 100%);
+    background-image: -moz-linear-gradient(175deg, #00b2fd 0%, #00ff0d 100%);
+    background-image: -o-linear-gradient(175deg, #00b2fd 0%, #00ff0d 100%);
+    background-image: linear-gradient(275deg, #00b2fd 0%, #00ff0d 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    transition: .3s;  /*  
+   &:hover {
+       transform: skewY(2deg);
+   }
+   */
+    padding-right: 2rem;
+    padding-left: 2rem;
+}
+
+.u-center-text {
+  text-align: center;
+}
+
+.u-margine-bottom-8rem {
+  margin-bottom: 8rem;
+}
+
+.trece-zaglavlje {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+
+.paragraf {
+  font-size: 1.6rem;
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+.paragraf:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+.btn-text:link, .btn-text:visited {
+  color: #28b485;
+  display: inline-block;
+  text-decoration: none;
+  border-bottom: 1px solid #28b485;
+  font-size: 1.6rem;
+  transition: all .3s;
+  padding: 0 2px 0 2px;
+}
+.btn-text:hover {
+  background-color: #28b485;
+  transition: all .3s;
+  color: white;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(0);
+}
+
+.o-nama-slike {
+  position: relative;
+}
+
+.o-nama-slike img {
+  width: 55%;
+  position: absolute;
+  box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.2);
+  transition: all .2s;
+  border-radius: 2px;
+  outline-offset: 1.5rem;
+}
+
+.o-nama-slike > img:hover {
+  transform: scale(1.3);
+  transition: all .2s;
+  z-index: 2;
+  box-shadow: 0.5rem 0.5rem 2rem rgba(0, 0, 0, 0.4);
+  outline: 1.5rem solid #28b485;
+  outline-offset: 1.5rem;
+}
+
+.o-nama-slike:hover img:not(:hover) {
+  transform: scale(0.7);
+  transition: .2s;
+}
+
+.slika-1 {
+  left: 8rem;
+  top: 0rem;
+}
+
+.slika-2 {
+  left: -4rem;
+  top: 9rem;
+}
+
+.slika-3 {
+  left: 18rem;
+  top: 18rem;
+}
+
+.feature-box {
+  transition: .3s ease;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+.feature-box__ikona {
+  font-size: 6rem;
+  display: inline-block;
+  font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+  background-image: -webkit-linear-gradient(175deg, #00b2fd 0%, #00ff0d 100%);
+  background-image: -moz-linear-gradient(175deg, #00b2fd 0%, #00ff0d 100%);
+  background-image: -o-linear-gradient(175deg, #00b2fd 0%, #00ff0d 100%);
+  background-image: linear-gradient(275deg, #00b2fd 0%, #00ff0d 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.feature-box:hover {
+  transform: translateY(-1.5rem) scale(1.03);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+  transition: .3s ease;
+}
+
+.features {
+  margin-top: -20rem;
+  padding: 20rem 0;
+  background-image: -webkit-linear-gradient(132deg, rgba(85, 197, 122, 0.8) 0%, rgba(40, 180, 133, 0.8) 24.87%, rgba(126, 213, 111, 0.8) 61.14%, rgba(85, 197, 122, 0.8) 100%), url("../img/hero.jpg");
+  background-image: -moz-linear-gradient(132deg, rgba(85, 197, 122, 0.8) 0%, rgba(40, 180, 133, 0.4) 24.87%, rgba(126, 213, 111, 0.8) 61.14%, rgba(85, 197, 122, 0.4) 100%), url("../img/hero.jpg");
+  background-image: -o-linear-gradient(132deg, rgba(85, 197, 122, 0.8) 0%, rgba(40, 180, 133, 0.8) 24.87%, rgba(126, 213, 111, 0.8) 61.14%, rgba(126, 213, 111, 0.4) 100%), url("../img/hero.jpg");
+  background-image: linear-gradient(318deg, rgba(85, 197, 122, 0.8) 0%, rgba(40, 180, 133, 0.8) 24.87%, rgba(126, 213, 111, 0.8) 61.14%, rgba(85, 197, 122, 0.8) 100%), url("../img/hero.jpg");
+  background-size: cover;
+  /* ovo dole je da sredina vrha slike uvijek bude na sredini i kropa ostatak slike dakle responzivno. mo┼╛e biti i bottom i center */
+  background-position: top;
+  /* ovo je super stvar kratimo ili pove─ìavamo ta─ìke pravougaonika od gornje lijeve pa u smjeru kazaljke za satu redamo koordinate i tako smo sasjekli donji desni dio*/
+  clip-path: polygon(0 25%, 100% 0, 100% 75%, 0% 100%);
+}
+
++
+.karta {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 50rem;
+}
+
+.strana {
+  background-color: white;
+  height: 50rem;
+  transition: all .8s;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.3);
+  width: 100%;
+  backface-visibility: hidden;
+  text-align: center;
+  border-radius: 3px;
+  top: 0;
+  left: 0;
+}
+
+.prednja {
+  transform: rotateY(0deg);
+  position: absolute;
+}
+
+.zadnja {
+  background-color: green;
+  transform: rotateY(180deg);
+}
+
+.karta:hover .prednja {
+  transform: rotateY(-180deg);
+  transition: all .8s;
+}
+
+.karta:hover .zadnja {
+  transform: rotateY(0deg);
+  transition: all .8s;
+}
+
+/* uspio sam da dvije strane rje┼íim ovako ali ─çu ipak slu┼╛ati njega
+.karta > .zadnja{
+    
+    visibility: hidden
+}
+
+.karta:hover {
+    background-color: khaki;
+    transform: rotateY(180deg);
+    transition: all .8s;
+}
+
+.karta:hover .prednja{
+    visibility: hidden
+}
+.karta:hover .zadnja{
+    visibility: visible;
+    transition-delay: .3s;
+}
+
+.prednja {
+    transform: rotateY(0deg);
+}
+
+.zadnja {
+ 
+    transform: rotateY(180deg);
+
+}
+*/
+.btn--white-karta {
+  margin-top: 3rem;
+  background-color: #FFFFFF;
+  color: #777777;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+.btn--white-karta::after {
+  background-color: white;
+}

@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+/*vrlo je bitno da velike dimenzije idu ipred malih*/
+
+/* 960 max-width:60em*/
+@media only screen and  (max-width:76em){
+.main-menu {
+    margin-left: -0.4rem;
+}
+     html {
+    font-size: 60%;
+    }
+    body {
+        padding: 0;
+    }
+ .row [class^="col-"] {
+        width: 60%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 3rem;
+        text-align: center;
+        margin-left: 20%;
+        
+    }
+    
+    .paragraf{
+        font-size: 3rem !important;
+    }
+    .trece-zaglavlje {
+  font-size: 3.2rem;
+}
+    .section-o-nama {
+    padding-bottom: 60rem;
+     
+
+}
+    
+    .features {
+        padding-top: 20rem;
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+    }
+    
+    .o-nama-slike {
+        padding-bottom: -20rem;
+    }
+    .karta-detalji ul li{
+        font-size: 3rem;
+    }
+    
+    .karta-prednja-zaglavlje {
+        font-size: 4rem;
+        line-height: 3.7rem;
+    }
+    
+    .sekundarno-zaglavlje {
+        font-size: 4rem;
+    }
+    .samo {
+    
+    font-size: 3rem;
+        
+}
+    .cijena {
+     font-size: 5rem;   
+    }   
+}
+
+
+
+/* 768 px */ 
+@media only screen and (max-width:48em){
+.body-menu {
+    margin-left: 2rem;
+}
+ html {
+    font-size: 45%;
+    }
+
+ .row [class^="col-"] {
+        width: 60%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 3rem;
+        text-align: center;
+        margin-left: 20%;
+        
+    }
+    
+    .paragraf{
+        font-size: 3rem !important;
+    }
+    .trece-zaglavlje {
+  font-size: 3.2rem;
+}
+    .section-o-nama {
+    padding-bottom: 60rem;
+     
+
+}
+    
+    .features {
+        padding-top: 20rem;
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+    }
+    
+    .o-nama-slike {
+        padding-bottom: -20rem;
+    }
+    .karta-detalji ul li{
+        font-size: 3rem;
+    }
+    
+    .karta-prednja-zaglavlje {
+        font-size: 4rem;
+        line-height: 3.7rem;
+    }
+    
+    .sekundarno-zaglavlje {
+        font-size: 4rem;
+    }
+    .samo {
+    
+    font-size: 3rem;
+        
+}
+    .cijena {
+     font-size: 5rem;   
+    }
+}
+
+/* 540px */ 
+@media only screen and (max-width:37.5em){
+
+    html {
+    font-size: 30%;
+    }
+    
+.body-menu {
+    margin-top: -1.6rem;
+
+}
+    .row [class^="col-"] {
+        width: 50%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 3rem;
+        text-align: center;
+        margin-left: 25%;
+        
+    }
+    
+    .paragraf{
+        font-size: 3rem !important;
+    }
+    .trece-zaglavlje {
+  font-size: 3.2rem;
+}
+    .section-o-nama {
+    padding-bottom: 60rem;
+     
+
+}
+    
+    .features {
+        padding-top: 20rem;
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+    }
+    
+    .o-nama-slike {
+        padding-bottom: -20rem;
+    }
+    .karta-detalji ul li{
+        font-size: 3rem;
+    }
+    
+    .karta-prednja-zaglavlje {
+        font-size: 4rem;
+        line-height: 3.7rem;
+    }
+    
+    .sekundarno-zaglavlje {
+        font-size: 4rem;
+    }
+    .samo {
+    
+    font-size: 3rem;
+        
+}
+    .cijena {
+     font-size: 5rem;   
+    }
+    
+
+} 

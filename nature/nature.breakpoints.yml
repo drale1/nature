@@ -1,0 +1,36 @@
+nature.max:
+  label: max
+  mediaQuery: 'all and (min-width: 1900px)'
+  weight: 10
+  multipliers:
+    - 1x
+nature.maxsmall:
+  label: maxsmall
+  mediaQuery: 'all and (min-width: 1200px) and (max-width: 1899px)'
+  weight: 9
+  multipliers:
+    - 1x
+nature.midbig:
+  label: midbig
+  mediaQuery: 'all and (min-width: 700px) and (max-width: 1199px)'
+  weight: 8
+  multipliers:
+    - 1x
+nature.midsmall:
+  label: midsmall
+  mediaQuery: 'all and (min-width: 500px) and (max-width: 6990px)'
+  weight: 7
+  multipliers:
+    - 1x
+nature.minbig:
+  label: minbig
+  mediaQuery: 'all and (min-width: 350px) and (max-width: 499px)'
+  weight: 6
+  multipliers:
+    - 1x
+nature.min:
+  label: min
+  mediaQuery: 'all and (max-width: 349px)'
+  weight: 5
+  multipliers:
+    - 1x

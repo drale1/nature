@@ -1,0 +1,20 @@
+name: nature
+description: Pokušaj da custom theme ima 100 100 brzinu bez AMP-a
+type: theme
+base theme: false
+core: 8.x
+core_version_requirement: ^8 || ^9
+
+
+
+libraries-override:
+  system/base: false
+  views/views.module: false
+    
+regions:
+  primary_menu: 'Primary menu'
+  header: Header
+  content: 'sadržaj'
+  features: 'Značajke'
+  tours: 'putovanja'
+  footer: 'Footer'

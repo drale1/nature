@@ -1,0 +1,384 @@
+.nesto {
+    background-color: #424DBF;
+    text-transform: uppercase;
+    text-shadow: 0px 0px;
+    color: #FFFFFF;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-top: 20px;
+    -webkit-box-shadow: 5px 5px 20px 0px #000000;
+    box-shadow: 5px 5px 20px 0px #000000;
+    display: inline-block; 
+}
+.nesto:hover {
+    background-color: #000000;
+    border-radius: 100px;
+    transition: 3s;
+}
+
+.sekundarno-zaglavlje:hover {
+    transform: skewY(2deg) skewX(20deg);
+    transition: all .3s;
+    letter-spacing: .2rem;
+    text-shadow: 0.5rem 1rem 2rem rgba(0,0,0,0.20);
+}
+
+.tours {
+    background-color:rgba(218,218,218,1.00);
+    padding-bottom: 20rem;
+    padding-top: 20rem;
+    margin-top: -22rem;
+    
+}
+
+.prva-karta {
+    background-image: -webkit-linear-gradient(310deg,rgba(255,210,175,1.00) 18.14%,rgba(255,103,0,1.00) 100%);
+    background-image: -moz-linear-gradient(310deg,rgba(255,210,175,1.00) 18.14%,rgba(255,103,0,1.00) 100%);
+    background-image: -o-linear-gradient(310deg,rgba(255,210,175,1.00) 18.14%,rgba(255,103,0,1.00) 100%);
+    background-image: linear-gradient(140deg,rgba(255,210,175,1.00) 18.14%,rgba(255,103,0,1.00) 100%);
+}
+.druga-karta {
+    background-image: -webkit-linear-gradient(310deg,rgba(176,255,173,1.00) 18.14%,rgba(5,126,0,1.00) 100%);
+    background-image: -moz-linear-gradient(310deg,rgba(176,255,173,1.00) 18.14%,rgba(5,126,0,1.00) 100%);
+    background-image: -o-linear-gradient(310deg,rgba(176,255,173,1.00) 18.14%,rgba(5,126,0,1.00) 100%);
+    background-image: linear-gradient(140deg,rgba(176,255,173,1.00) 18.14%,rgba(5,126,0,1.00) 100%);
+}
+.treca-karta {
+    background-image: -webkit-linear-gradient(310deg,rgba(173,184,255,1.00) 18.14%,rgba(0,61,126,1.00) 100%);
+    background-image: -moz-linear-gradient(310deg,rgba(173,184,255,1.00) 18.14%,rgba(0,61,126,1.00) 100%);
+    background-image: -o-linear-gradient(310deg,rgba(173,184,255,1.00) 18.14%,rgba(0,61,126,1.00) 100%);
+    background-image: linear-gradient(140deg,rgba(173,184,255,1.00) 18.14%,rgba(0,61,126,1.00) 100%);
+}
+
+.karta-slika {
+    background-size: cover;
+    height: 23rem;
+    background-blend-mode:screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); 
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); 
+}
+
+.karta-slika-1 {
+    background-image: -webkit-linear-gradient(310deg,rgba(255,210,175,1.00) 18.14%,rgba(255,103,0,1.00) 100%);
+    background-image: -moz-linear-gradient(310deg,rgba(255,210,175,1.00) 18.14%,rgba(255,103,0,1.00) 100%);
+    background-image: -o-linear-gradient(310deg,rgba(255,210,175,1.00) 18.14%,rgba(255,103,0,1.00) 100%);
+    background-image: linear-gradient(140deg,rgba(255,210,175,1.00) 18.14%,rgba(255,103,0,1.00) 100%),
+    url("../img/more.jpg");
+
+}  
+
+.karta-slika-2 {
+    background-image: -webkit-linear-gradient(310deg,rgba(176,255,173,1.00) 18.14%,rgba(5,126,0,1.00) 100%);
+    background-image: -moz-linear-gradient(310deg,rgba(176,255,173,1.00) 18.14%,rgba(5,126,0,1.00) 100%);
+    background-image: -o-linear-gradient(310deg,rgba(176,255,173,1.00) 18.14%,rgba(5,126,0,1.00) 100%);
+    background-image: linear-gradient(140deg,rgba(176,255,173,1.00) 18.14%,rgba(5,126,0,1.00) 100%),
+    url("../img/vodopad.jpg");
+
+}
+
+.karta-slika-3 {
+    background-image: -webkit-linear-gradient(310deg,rgba(173,184,255,1.00) 18.14%,rgba(0,61,126,1.00) 100%);
+    background-image: -moz-linear-gradient(310deg,rgba(173,184,255,1.00) 18.14%,rgba(0,61,126,1.00) 100%);
+    background-image: -o-linear-gradient(310deg,rgba(173,184,255,1.00) 18.14%,rgba(0,61,126,1.00) 100%);
+    background-image: linear-gradient(140deg,rgba(173,184,255,1.00) 18.14%,rgba(0,61,126,1.00) 100%), 
+    url("../img/planina.jpg");
+
+}
+
+
+
+.karta-prednja-zaglavlje {
+    font-size: 2.8rem;
+    font-weight: 500;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    text-transform: uppercase;
+    color: white;
+    position: absolute;
+    top: 15rem;
+    right: 2rem;
+    text-align: right;
+    display: inline;
+    line-height: 3rem
+    
+    
+}
+
+.karta-prednja-zaglavlje-1 {
+    box-shadow: 10px 0 0 rgba(255,103,0,.5), -10px 0 0 rgba(255,103,0,.5);
+    background: rgba(255,103,0,.5);
+}
+
+.karta-prednja-zaglavlje-2 {
+    box-shadow: 10px 0 0 rgba(5,126,0,.5), -10px 0 0 rgba(5,126,0,.5);
+    background: rgba(5,126,0,.5);
+}
+
+.karta-prednja-zaglavlje-3 {
+    background-image: -webkit-linear-gradient(270deg,rgba(2,21,172,0.40) 0%,rgba(2,21,172,0.40) 100%);
+    background-image: -moz-linear-gradient(270deg,rgba(2,21,172,0.40) 0%,rgba(2,21,172,0.40) 100%);
+    background-image: -o-linear-gradient(270deg,rgba(2,21,172,0.40) 0%,rgba(2,21,172,0.40) 100%);
+    background-image: linear-gradient(180deg,rgba(2,21,172,0.40) 0%,rgba(2,21,172,0.40) 100%);
+    background-size: 120% 120%;
+    border-color: rgba(2,21,172,0.00);
+    border-left-style: dotted;
+    border-right-style: dotted;
+    border-width: 11px;   /* box-shadow: 10px 0 0 rgba(0,61,126,.5), -10px 0 0 rgba(0,61,126,.5);
+    background: rgba(0,61,126,.5); */
+}
+.karta-detalji ul li {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    font-size: 2rem;
+    display: block;
+    text-decoration: none;
+    width: 85%;
+    line-height: 5rem;
+}
+.pozadinska-slika {
+    background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,0.39) 0%,rgba(255,255,255,0.39) 100%), url("../img/Komar-Vliestapete-Pura-Kaunui-Falls-,-300,250-cm-von-KOMAR-bunt-1205044709.jpg");
+    background-image: -moz-linear-gradient(270deg,rgba(255,255,255,0.39) 0%,rgba(255,255,255,0.39) 100%), url("../img/Komar-Vliestapete-Pura-Kaunui-Falls-,-300,250-cm-von-KOMAR-bunt-1205044709.jpg");
+    background-image: -o-linear-gradient(270deg,rgba(255,255,255,0.39) 0%,rgba(255,255,255,0.39) 100%), url("../img/Komar-Vliestapete-Pura-Kaunui-Falls-,-300,250-cm-von-KOMAR-bunt-1205044709.jpg");
+    background-image: linear-gradient(180deg,rgba(255,255,255,0.39) 0%,rgba(255,255,255,0.39) 100%), url("../img/Komar-Vliestapete-Pura-Kaunui-Falls-,-300,250-cm-von-KOMAR-bunt-1205044709.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60rem;
+}
+.pravougaonik {
+    width: 30%;
+    height: 20rem;
+    background-color: rgba(255,255,255,1.00);
+    display: inherit;
+    text-align: center;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0,0,0,.3);
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,.3);
+    margin-top: 30rem;
+    position: absolute;
+    left: 35%;
+    clip-path: polygon(20% 0%, 100% 0, 80% 100%, 0% 100%);
+    -webkit-clip-path: polygon(20% 0%, 100% 0, 80% 100%, 0% 100%);
+
+    
+}
+
+
+
+.animate {
+    width: 30%;
+    height: 20rem;
+    background-color: rgba(255,255,255,1.00);
+    display: inherit;
+    text-align: center;
+    margin: 0 auto;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0,0,0,.3);
+    box-shadow: 0 1.5rem 4rem rgba(0,0,0,.3);
+    margin-top: 30rem;
+    position: absolute;
+    left: 35%;
+    clip-path: polygon(20% 0%, 100% 0, 80% 100%, 0% 100%);
+    -webkit-clip-path: polygon(20% 0%, 100% 0, 80% 100%, 0% 100%);
+    animation-name: fadeInLeft;
+    animation-duration: 4s;
+    font-size: 2rem;
+}
+
+@keyframes fadeInLeft {
+   0% {
+      opacity: 0.3;
+      transform: translateX(-50rem);
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}  
+
+/*
+.animate{
+            animation-name: slideRight;
+    -webkit-animation-name: slideRight; 
+
+    animation-duration: 5s;   
+    -webkit-animation-duration: 5s;
+
+    animation-timing-function: ease-in-out; 
+    -webkit-animation-timing-function: ease-in-out;     
+
+    visibility: visible !important; 
+}
+
+@keyframes slideRight {
+
+    0% {
+        transform: translateX(-150%);
+    }
+    50%{
+        transform: translateX(8%);
+    }
+    65%{
+        transform: translateX(-4%);
+    }
+    80%{
+        transform: translateX(4%);
+    }
+    95%{
+        transform: translateX(-2%);
+    }               
+    100% {
+        transform: translateX(0%);
+    }   
+
+}
+*/
+.pravouganik-sadrzaj {
+    
+
+}
+
+
+
+
+.karta-detalji ul li:not(:last-child){
+        
+    border-bottom: .2px solid grey;
+}
+
+.karta-detalji ul {
+    list-style: none
+}
+
+.samo {
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    font-size: 2rem;
+    color: white;
+    padding-top: 15rem;
+}
+
+.cijena {
+    font-family:Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+    font-weight: 10;
+    font-size: 4rem;
+    color: white;
+    padding-top: 2rem;
+}
+.karta {
+
+    position: relative;
+
+}
+.omotac {
+    position: relative;
+
+}
+
+
+.body-menu {
+
+    background-color: none;
+    font-family: 'Open Sans', Verdana, Geneva, Tahoma, sans-serif;
+    position: fixed;
+    z-index: 20;
+    top: 8rem;
+    left: 7%;
+    
+}
+.body-menu, .main-menu, .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-menu {
+    position: relative;
+    background-color: rgba(255,255,255,0.50);
+    padding: 2rem;
+    transition: 0.5s;
+    border-radius: 5rem;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+.menu {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.main-menu input:checked ~ .menu {
+    width: 50rem;
+}
+.menu li {
+    list-style: none;
+    margin: 0 10px;
+}
+.menu li a {
+    text-decoration: none;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.menu li a:hover {
+    color: #161919;
+}
+.main-menu input {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    opacity: 0;
+}
+.main-menu span {
+    position: absolute;
+    left: 3rem;
+    width: 3rem;
+    height: 4px;
+    border-radius: 5rem;
+    background-color: #666;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.main-menu input:checked ~ span {
+    background-color: #FF4D50;
+}
+.main-menu span:nth-child(2) {
+    transform: translateY(-8px);
+}
+.main-menu input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+.main-menu span:nth-child(3) {
+    transform: translateY(8px);
+}
+.main-menu input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+.main-menu input:checked ~ span:nth-child(4) {
+    display: none;
+}:root {
+}
+
+
+
+
+/* kada se postavljaju media queries breaking points za male rezolucije se postavlja max a za velike rezolucije min 
+
+on je postavio 4 brakingpointa i jedan osnovni na kojem smo radili. To su ovi
+
+0-600px       telefon                     max 600
+600-900px     tablet portret              max 900
+900-1200px    tablet landscape            max 1200
+1200-1800px   je osnovni sve ono kako smo i radili
+1800px+       veliki                      min 1800
+
+
+*/
+
+
+
+
+
+
+
+
+
+
